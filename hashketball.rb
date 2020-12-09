@@ -1,5 +1,5 @@
 # Write your code below game_hash
-
+require 'pry'
 def game_hash
   {
     home: {
@@ -160,6 +160,7 @@ def player_numbers(jersey)
   game_hash.each do |team, team_info|
     if team_info[:team_name] == jersey
       team_info.each do |key, value|
+        binding.pry
         if key == :players
           value.each do |player|
           output.push(player[:number])
